@@ -1,0 +1,60 @@
+\newcommand{\keep}[1]{}
+
+\newcommand{\smlcode}[1]{{\texttt{#1}}}
+\newcommand{\figitem}[1]{\textsf{#1}}
+\newcommand{\pragmatic}[1]{$\langle$$\langle$\figitem{#1}$\rangle$$\rangle$} 
+\newcommand{\concept}[1]{{\emph{#1}}}
+
+ \newcommand{\com}[1]{
+         \mbox{}
+        \marginpar{\hrule\footnotesize\raggedright\hspace{0pt}#1\vspace{2mm}}
+ }
+
+\newcommand{\oldcom}[1]{{}}
+
+\newcommand{\okcom}[1]{{}}
+
+\newcommand{\postponedcom}[1]{{}}
+
+\newcommand{\ignore}[1]{{}}
+
+\newcommand{\original}[1]{{}}
+
+\newcommand{\reduce}[1]{{}}
+
+%\renewcommand{\com}[1]{\footnote{#1}}
+
+%\renewcommand{\com}[1]{}
+
+% \theoremstyle{definition}
+% \newtheorem{definition}{Definition}
+% \newtheorem{proposition}[definition]{Proposition}
+
+\keep{
+\lstset{%language=groovy,
+   basicstyle=\ttfamily\small %
+%  commentstyle=\itshape,%
+%  stringstyle=\itshape,keywordstyle=\bf,tabsize=2,numberstyle=\tiny,%
+%  stepnumber=5,firstnumber=1,numberfirstline=true,%
+%  showstringspaces=false,numbers=left,%
+%  numberbychapter=false,belowcaptionskip=\smallskipamount,basewidth=.5em,
+%  escapechar=\$
+}
+}
+
+
+
+% eki: suggest to switch to the following use of listings for the final version
+%
+\renewcommand{\ttdefault}{pcr}  
+
+\lstset{
+  language=Java,
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\bfseries,
+  showstringspaces=false,
+%   alsoletter={\%},               % Just in case we want %%yield%%
+%   morekeywords={\%\%yield\%\%},  % to be shown as keyword (but does not look
+%                                  % too nice for me)
+  moredelim=**[is][\color{blue}]{@}{@}
+}

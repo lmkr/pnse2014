@@ -1,0 +1,121 @@
+\documentclass{llncs}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{listings}
+\usepackage{authblk}
+%\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{tabularx}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage{capt-of}
+
+\input{macros.tex}
+  
+%\title{Implementing the WebSocket Protocol \\ based on Coloured Petri Nets Modelling and \\ Automated Code Generation}
+ 
+\title{An Approach for the Engineering of Protocol Software from Coloured Petri Net Models: \\ A Case Study of the IETF WebSocket Protocol} 
+\author{Lars Michael Kristensen}
+\institute{Department of Computing, Bergen University College, Norway
+\\
+Email: \email{lmkr@hib.no} 
+}
+
+\pagestyle{empty}
+\begin{document}
+  
+\maketitle
+
+\begin{center}
+{\textbf{Extended Abstract}}
+\end{center}
+
+% The relevance of formal modelling of protocols 
+The vast majority of software systems today can be characterised as
+concurrent and distributed systems as their operation inherently
+relies on protocols executed between independently scheduled software
+components and applications. The engineering of correct protocols can
+be a challenging task due to their complex behaviour which may result
+in subtle errors if not carefully designed. Ensuring
+interoperability between independently made implementations is also
+challenging due to ambiguous protocol specifications.  Model-based
+software engineering offers several attractive benefits for the
+implementation of protocols, including automated code generation for
+different platforms from design-level models. Furthermore, the use of
+formal modelling in combination with verification and model checking
+provides techniques to support the development of reliable protocol
+implementations.
+
+% CPNs and protocol modelling and verification
+Coloured Petri Nets (CPNs) \cite{CPNTOOLSPAPER} is formal language
+combining Petri Nets with a programming language to obtain a modelling
+language that scales to large systems. In CPNs, Petri Nets provide the
+primitives for modelling concurrency and synchronisation while the
+Standard ML programming language provides the primitives for modelling
+data and data manipulation. CPNs have been successfully applied for
+the modelling and verification of many protocols, including Internet
+protocols such as the TCP, DCCP, and DYMO protocols
+\cite{billington04,acpn2012}. Formal modelling and verification have
+been useful in gaining insight into the operation of the protocols
+considered and have resulted in improved protocol
+specifications. However, earlier work has not fully leveraged the
+investment in modelling by also taking the step to automated code
+generation as a way to obtain an implementation of the protocol under
+consideration.
+
+% PetriCode approach 
+
+In earlier work~\cite{SKK13-2}, we have proposed the PetriCode
+approach and developed a supporting software
+tool~\cite{petricodePaper} for automatically generating protocol
+implementations based on CPN models.  The basic idea of the approach
+is to enforce particular modelling patterns and annotate the CPN
+models with code generation \concept{pragmatics}. The pragmatics are
+bound to code generation templates and used to direct a template-based
+model-to-text transformation that generates the protocol
+implementation. As part of earlier work, we have demonstrated the use
+of the PetriCode approach on small protocols. In addition, we have
+shown that our approach supports code generation for multiple
+platforms, and that it leads to code that is readable and also %upwards
+%and downwards 
+ compatible with other software~\cite{ecmfa14}.
+
+% the web socket protocol and contributions of this work
+
+In the present work we consider the application of our code generation 
+approach as
+implemented in the PetriCode tool to obtain protocol software
+implementing the IETF WebSocket protocol~\cite{fette2011websocket}
+protocol for the Groovy language and platform. This demonstrates that
+our approach and tool scales to industrial-sized protocols. The
+WebSocket protocol is a relatively new protocol %currently under
+developed by the IETF. The WebSocket protocol makes it possible to
+upgrade an HTTP connection to an efficient message-based full-duplex
+connection.  WebSocket has already become a popular protocol for
+several web-based applications such as games and media streaming services
+where bi-directional communication with low latency is needed.
+
+The contributions of our work include showing how we have been able to
+model the WebSocket protocol following the PetriCode modelling
+conventions. Furthermore, we perform formal verification of the CPN
+model prior to code generation, and test the implementation for
+interoperability against the Autobahn WebSocket test-suite
+\cite{Autobahn} resulting in 97\% and 99\% success rate for the client
+and server implementation, respectively. The tests show that the cause
+of test failures were mostly due to local and trivial errors in newly
+written code-generation templates, and not related to the overall
+logical operation of the protocol as specified by the CPN
+model. Finally, we demonstrate in this paper that the generated code
+is interoperable with other WebSocket implementations.
+  
+Joint work with Kent I.F. Simonsen (Bergen University College /
+Technical University of Denmark) and Ekkart Kindler (Technical
+University of Denmark).
+
+\bibliographystyle{plain}
+\bibliography{bib}
+
+\end{document}	
