@@ -1,5 +1,7 @@
-\documentclass{llncs}
+\documentclass[a4paper]{llncs}
+
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{subfigure}
@@ -30,14 +32,14 @@ Email: \email{lmkr@hib.no}
 \maketitle
 
 \begin{center}
-{\textbf{Extended Abstract}}
+{\textbf{Invited Talk}}
 \end{center}
 
 % The relevance of formal modelling of protocols 
 The vast majority of software systems today can be characterised as
 concurrent and distributed systems as their operation inherently
 relies on protocols executed between independently scheduled software
-components and applications. The engineering of correct protocols can
+components. The engineering of correct protocols can
 be a challenging task due to their complex behaviour which may result
 in subtle errors if not carefully designed. Ensuring
 interoperability between independently made implementations is also
@@ -45,7 +47,7 @@ challenging due to ambiguous protocol specifications.  Model-based
 software engineering offers several attractive benefits for the
 implementation of protocols, including automated code generation for
 different platforms from design-level models. Furthermore, the use of
-formal modelling in combination with verification and model checking
+formal modelling in combination with model checking
 provides techniques to support the development of reliable protocol
 implementations.
 
@@ -111,11 +113,12 @@ logical operation of the protocol as specified by the CPN
 model. Finally, we demonstrate in this paper that the generated code
 is interoperable with other WebSocket implementations.
   
-Joint work with Kent I.F. Simonsen (Bergen University College /
-Technical University of Denmark) and Ekkart Kindler (Technical
-University of Denmark).
+\paragraph{Acknowledgement.} The results presented in this invited talk is based on joint work with Kent I.F. Simonsen, Bergen University College and the Technical University of Denmark, and Ekkart Kindler, the Technical
+University of Denmark.
 
 \bibliographystyle{plain}
-\bibliography{bib}
 
+%\bibliography{bib}
+
+\input{lmk_pnse.bbl}
 \end{document}	

@@ -1,0 +1,54 @@
+\begin{thebibliography}{1}
+
+\bibitem{billington04}
+J.~Billington, G.E. Gallasch, and B.~Han.
+\newblock {A Coloured {Petri} Net Approach to Protocol Verification}.
+\newblock In {\em Lectures on Concurrency and Petri Nets}, volume 3098 of {\em
+  Lecture Notes in Computer Science}, pages 210--290. Springer, 2004.
+
+\bibitem{fette2011websocket}
+I.~Fette and A.~Melnikov.
+\newblock The websocket protocol, 2011.
+\newblock {\\ \url{http://tools.ietf.org/html/rfc6455}}.
+
+\bibitem{CPNTOOLSPAPER}
+K.~Jensen, L.M. Kristensen, and L.~Wells.
+\newblock {Coloured Petri Nets and CPN Tools for modelling and validation of
+  concurrent systems}.
+\newblock {\em International Journal on Software Tools for Technology
+  Transfer}, 9(3-4):213--254, 2007.
+
+\bibitem{acpn2012}
+L.M. Kristensen and K.I.F. Simonsen.
+\newblock {Applications of Coloured Petri Nets for Functional Validation of
+  Protocol Designs}.
+\newblock In {\em Transactions on Petri Nets and Other Models of Concurrency
+  VII}, volume 7480 of {\em LNCS}, pages 56--115. Springer, 2013.
+
+\bibitem{SKK13-2}
+K.~I.~F. Simonsen, L.~M. Kristensen, and E.~Kindler.
+\newblock {Generating Protocol Software from CPN Models Annotated with
+  Pragmatics}.
+\newblock In {\em {Formal Methods: Foundations and Applications}}, volume 8195
+  of {\em {LNCS}}, pages 227--242. Springer, 2013.
+
+\bibitem{ecmfa14}
+K.I.F. Simonsen.
+\newblock {An Evaluation of Automated Code Generation with the PetriCode
+  Approach}.
+\newblock In {\em {To appear in Proc. of PNSE'14}}, 2014.
+
+\bibitem{petricodePaper}
+K.I.F. Simonsen.
+\newblock {PetriCode: A Tool for Template-based Code Generation from CPN
+  Models}.
+\newblock In {\em {SEFM 2013 Collocated Workshops: BEAT2, WS-FMDS, FM-RAIL-Bok,
+  MoKMaSD, and OpenCert}}, volume 8368 of {\em LNCS}, pages 151--166. Springer,
+  2014.
+
+\bibitem{Autobahn}
+{Tavendo GmbH}.
+\newblock {\em Autobahn|Testsuite}.
+\newblock {\url{http://autobahn.ws/testsuite/}}.
+
+\end{thebibliography}
