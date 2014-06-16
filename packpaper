@@ -1,13 +1,26 @@
 #!/bin/bash
 
-echo "Packing paper ..."
+echo "Compiling paper ..."
+rm lmk_pnse.pdf
+pdflatex lmk_pnse.tex
+
+echo "Copying files ..."
+mkdir ../pnse14-lmk
+
 cp llncs.cls ../pnse14-lmk/.
 cp lmk_pnse.bbl ../pnse14-lmk/.
 cp macros.tex ../pnse14-lmk/.
 cp lmk_pnse.tex ../pnse14-lmk/pnse14-lmk.tex
 cp pnse_lmk_copyright_signed.pdf ../pnse14-lmk/.
+cp lmk_pnse.pdf ../pnse14-lmk/pnse14-lmk.pdf
 
 cd ..
 
-zip -r pnse14-lmk.zip pnse14-lmk
+
+
+echo "Packing paper ..."
+rm pnse14-lmk.zip
+zip -r pnse14-lmk.zip pnse14-lmk/
+
+rm -rf pnse14-lmk
 echo "Done"

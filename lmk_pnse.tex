@@ -71,34 +71,32 @@ consideration.
 % PetriCode approach 
 
 In earlier work~\cite{SKK13-2}, we have proposed the PetriCode
-approach and developed a supporting software
-tool~\cite{petricodePaper} for automatically generating protocol
-implementations based on CPN models.  The basic idea of the approach
-is to enforce particular modelling patterns and annotate the CPN
-models with code generation \concept{pragmatics}. The pragmatics are
-bound to code generation templates and used to direct a template-based
-model-to-text transformation that generates the protocol
-implementation. As part of earlier work, we have demonstrated the use
-of the PetriCode approach on small protocols. In addition, we have
-shown that our approach supports code generation for multiple
-platforms, and that it leads to code that is readable and also %upwards
-%and downwards 
- compatible with other software~\cite{ecmfa14}.
+approach and a supporting software tool~\cite{petricodePaper} has been
+developed for automatically generating protocol implementations based
+on CPN models.  The basic idea of the approach is to enforce
+particular modelling patterns and annotate the CPN models with code
+generation \concept{pragmatics}. The pragmatics are bound to code
+generation templates and used to direct a template-based model-to-text
+transformation that generates the protocol implementation. As part of
+earlier work, we have demonstrated the use of the PetriCode approach
+on small protocols. In addition, it has been shown that our approach
+supports code generation for multiple platforms, and that it leads to
+code that is readable and also compatible with other
+software~\cite{ecmfa14}.
 
 % the web socket protocol and contributions of this work
 
-In the present work we consider the application of our code generation 
-approach as
-implemented in the PetriCode tool to obtain protocol software
-implementing the IETF WebSocket protocol~\cite{fette2011websocket}
-protocol for the Groovy language and platform. This demonstrates that
-our approach and tool scales to industrial-sized protocols. The
-WebSocket protocol is a relatively new protocol %currently under
-developed by the IETF. The WebSocket protocol makes it possible to
-upgrade an HTTP connection to an efficient message-based full-duplex
-connection.  WebSocket has already become a popular protocol for
-several web-based applications such as games and media streaming services
-where bi-directional communication with low latency is needed.
+In the present work we consider the application of our code generation
+approach as implemented in the PetriCode tool to obtain protocol
+software implementing the IETF WebSocket
+protocol~\cite{fette2011websocket} protocol for the Groovy language
+and platform. This demonstrates that our approach and tool scales to
+industrial-sized protocols. The WebSocket protocol is a relatively new
+protocol and makes it possible to upgrade an HTTP connection to an
+efficient message-based full-duplex connection.  WebSocket has already
+become a popular protocol for several web-based applications such as
+games and media streaming services where bi-directional communication
+with low latency is needed.
 
 The contributions of our work include showing how we have been able to
 model the WebSocket protocol following the PetriCode modelling
